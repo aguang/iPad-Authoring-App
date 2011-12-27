@@ -1,0 +1,14 @@
+/* basic.css */
+
+html, body { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline}
+
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, code, del, dfn, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline}
+
+body.bp {line-height: 1.5; font-family: Helvetica Neue, Arial, Helvetica, sans-serif; color: #333333; font-size: 75% }
+
+#wrapper {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em; position: relative; font-size: 16px; float: none; width: 800px; text-align: left}
+
+body.two-col #header {margin: 0 auto; padding: 0; position: relative; width: 800px; padding-top: 1px; margin-bottom: 1em; font-size: 16px}
+
+* html body.two-col #header {overflow-x: hidden}
+body.two-col #sidebar{ float: left; width: 180px; margin: 10px}
