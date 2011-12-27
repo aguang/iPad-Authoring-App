@@ -5,17 +5,10 @@
 <title>Text to HTML Editor</title>
 
 <link href="basic.css" rel="stylesheet" type="text/css" />
-<script src="javascripts/wysiwyg.js" type="text/javascript"></script>
+<script src="ckeditor/ckeditor.js" type="text/javascript"></script>
+<script type="text/javascript" src="ckeditor/adapters/jquery.js"></script>
+<script type="text/javascript" src="javascripts/basic.js"></script>
 
-<script language="javascript">
-  var mysettings = new WYSIWYG.Settings();
-
-  // attach the editor to all textareas of the page
-  WYSIWYG.attach('all', mysettings)
-
-  mysettings.ImagesDir = "images/";
-  mysettings.PopupsDir = "popups/";
-</script>
 
 </head>
 
@@ -25,15 +18,22 @@
 
 <div id="header"> header </div>
 
-<div id="sidebar">
-<ul>
-<li><a href="javascript:void(0);" onclick="return viewSource('draft');">Convert to HTML</a></li>
-<li><a href="javascript:void(0);" onclick="return viewText('draft');">Convert to RichText</a></li>
-</ul>
-</div>
+<!--<div id="sidebar">-->
+<!--<ul id="entry-tabs">-->
+<!--<li id="rich" class="on"><a href="javascript:void(0);" onclick="return viewSource('editor1');">Convert to HTML</a></li>-->
+<!--<li id="plain"><a href="javascript:void(0);" onclick="return viewText('editor1');">Convert to RichText</a></li>-->
+<!--</ul>-->
+<!--</div>-->
 
 <div id="entry_form">
-<textarea cols="40" id="entry_body" name="entry[body]" rows="20"></textarea>
+<form method="post">
+<textarea id="editor1" name="editor1" class="ckeditor" cols="40" rows="20">Here's an example!</textarea>
+<script language="javascript" type="text/javascript">
+  CKEDITOR.replace( 'editor1',
+  { fullPage: true, extraPlugins : 'docprops' });
+</script>
+<input type="submit" />
+</form>
 </div>
 
 </div>
